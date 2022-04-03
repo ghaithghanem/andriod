@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="325dp"
+        android:layout_height="281dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user1"
+        android:layout_width="148dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="324dp"
+
+        android:text="user"
+        android:textColor="#810101"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

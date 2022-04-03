@@ -1,0 +1,30 @@
+package com.example.tadribyassin
+
+import android.content.Context
+import androidx.room.*
+import androidx.sqlite.db.SupportSQLiteOpenHelper
+
+@Database(entities = [Champion::class], version = 1)
+abstract class AppDataBase : RoomDatabase(){
+    abstract fun championDao(): ChampionDao
+
+
+    companion object {
+        @Volatile
+        private var instance: AppDataBase? = null
+
+        fun getDatabase(context: Context): AppDataBase {
+            if (instance == null) {
+                synchronized(this) {
+                    instance =
+                        Room.databaseBuilder(context, AppDataBase::class.java, "champions")
+                            .allowMainThreadQueries()
+                            .build()
+                }
+            }
+            return instance!!
+        }
+    }
+
+
+}
